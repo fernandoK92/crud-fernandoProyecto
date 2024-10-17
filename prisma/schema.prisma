@@ -12,3 +12,13 @@ datasource db {
   provider = "postgresql"
   url      = env("DATABASE_URL")
 }
+
+model Spells {
+  id Int @id @default(autoincrement())
+  name String @unique
+  type String
+  description String
+  difficultyLevel String
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
