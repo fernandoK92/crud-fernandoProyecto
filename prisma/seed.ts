@@ -13,8 +13,16 @@ const post1 = await prisma.spells.create({
         difficultyLevel:"Intermediate",
     },
 });
-console.log({post1})
-    
+
+const post2 = await prisma.spells.create({
+    data: {
+        name: "Stupefy",
+        type: "Offensive",
+        description: "It is used in magical duels as a non-lethal but effective spell to immobilize the opponent.",
+        difficultyLevel:"Intermediate",
+    },
+});
+console.log({post1,post2})   
 }
 
 main()
